@@ -7,7 +7,7 @@ const https = require('https');
 (async () => {
 
 //init
-    const browser = await puppeteer.launch({headless: false});
+    const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
 
 //open website
@@ -53,7 +53,7 @@ await elementHandle2.uploadFile('output.jpg');
 await page.waitForTimeout(4000);
 await page2.click("input[name=submit]"); 
 await page.waitForTimeout(4000);
-//await page2.click("button[id=printButton]"); 
+await page2.click("button[id=printButton]"); 
 await page.waitForTimeout(4000);
 await page2.click("button[id=deleteButton]"); 
 
@@ -61,7 +61,7 @@ await page2.click("button[id=deleteButton]");
 
 
 //end
-//await browser.close();
+await browser.close();
 })
 
 
