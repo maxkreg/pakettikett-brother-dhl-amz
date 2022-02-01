@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "puppeteer": "^13.1.3"
+  },
+  "name": "pakettikett-scraper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "description": ""
+}
