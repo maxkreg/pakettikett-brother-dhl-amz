@@ -10,6 +10,11 @@ const https = require('https');
     const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
 
+
+
+
+
+//conversion sequence//
 //open website
 await page.goto('https://paketikett.de');
 
@@ -32,11 +37,9 @@ const imgUrl = await page.$eval('.w3-border, .w3-border-blue', img => img.src);
                 stream.close();
             })
         })
+//end conversion sequence//
 
-
-
-
-//print
+//print sequence//
 //init
 const page2 = await browser.newPage();
 
@@ -44,19 +47,23 @@ const page2 = await browser.newPage();
 await page2.goto('http://100.122.136.54:8013/labeldesigner');
 
 
-//upload asset
+//delete old asset
 await page2.click("button[id=deleteButton]");
 await page.waitForTimeout(4000);
+
+//upload asset
 const elementHandle2 = await page2.$("input[name=upload]");
 await page.waitForTimeout(4000);
 await elementHandle2.uploadFile('output.jpg');
 await page.waitForTimeout(4000);
 await page2.click("input[name=submit]"); 
 await page.waitForTimeout(4000);
+
+//print asset
 await page2.click("button[id=printButton]"); 
 await page.waitForTimeout(4000);
 await page2.click("button[id=deleteButton]"); 
-
+//end print sequence//
 
 
 
