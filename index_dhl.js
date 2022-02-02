@@ -88,13 +88,13 @@ console.log('clicked submit button');
 await page.waitForTimeout(4000);
 
 //print asset
-//await page2.click("button[id=printButton]"); 
+await page2.click("button[id=printButton]"); 
 console.log('printed asset');
 await page.waitForTimeout(4000);
 
 //delete used asset
 await page2.click("button[id=deleteButton]"); 
-console.log('deleted used asset');
+console.log('deleted used asset from brother web interface');
 
 //end print sequence//
 
