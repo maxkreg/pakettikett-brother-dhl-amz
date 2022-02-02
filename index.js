@@ -23,7 +23,7 @@ await page.select('#dienstleister', 'DHL_amz_retour');
 
 //upload asset
   const elementHandle = await page.$("input[name=dateiupload]");
-  await elementHandle.uploadFile('ShipperLabel.gif');
+  await elementHandle.uploadFile('/Users/Maxi/Downloads/ShipperLabel.gif');
   await page.click('button'); 
 
 //download jpgs
@@ -62,6 +62,8 @@ await page.waitForTimeout(4000);
 //print asset
 await page2.click("button[id=printButton]"); 
 await page.waitForTimeout(4000);
+
+//delete used asset
 await page2.click("button[id=deleteButton]"); 
 //end print sequence//
 
