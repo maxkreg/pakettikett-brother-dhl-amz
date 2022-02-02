@@ -1,2 +1,2 @@
-start with 'node index.js'. requires npm and puppetteer to be installed.
+start with 'node index.js'. requires Mikhail5555/brother_ql_web_image, npm and puppetteer to be installed.
 todo: get rid of timouts, create docs, create aliases for URIs/working directorys, create frontend, react to file extension dynamically
